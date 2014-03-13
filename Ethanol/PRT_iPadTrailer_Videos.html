@@ -1,0 +1,170 @@
+<html>
+<head>
+<meta name = "viewport" content = "width = device-width">
+<title>Canvas Over Video</title>
+
+<script type="text/javascript">
+
+var can;
+var ctx;
+var vid;
+var playButton;
+var vidTimer;
+var text;
+var angle = 0;
+
+function init() {
+	vid = document.getElementById("vid");
+	playButton = document.getElementById("play");	
+	can = document.getElementById("can");
+	ctx = can.getContext('2d');
+	vid.addEventListener('ended', vidEnd, false);
+	vid.addEventListener('play', setAnimate, false);
+	ctx.fillStyle = "white";
+	ctx.strokeStyle = "black";
+	ctx.font = "20pt Helvetica";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle" ;
+	animate();
+}
+
+// Draw spinning text
+function animate() {
+	ctx.save();
+	// clear screen
+	ctx.clearRect(0,0,can.width,can.height);
+	// set origin at center of canvas
+	ctx.translate(can.width / 2, can.height / 2);
+	// spin the canvas
+	ctx.rotate(angle);
+	// draw white text with a black outline
+	ctx.fillText ("Animation over video!", 0,0);
+	ctx.strokeText ("Animation over video!", 0,0);
+	ctx.restore();
+	// increment rotation angle, reset to 0 at 2 * Pi
+	angle = angle + 0.1;
+	if (angle>6.28) angle = 0;
+	// if video not paused or ended, repeat in 50 msec
+	var vidState = document.querySelector("video");
+	if (!vidState.paused && !vidState.ended)
+		vidTimer = setTimeout("animate();", 50);
+}
+
+// Start animation when video starts playing
+function setAnimate() {
+	clearTimeout(vidTimer);
+	vidTimer = setTimeout("animate();", 50);
+}
+
+
+function playVideo() {
+	if (playButton.value=="Play") {
+		vid.play();
+		play.value = "Pause";
+	}
+	else {
+		vid.pause();
+		playButton.value = "Play";
+	}
+}
+
+function vidEnd() {
+	playButton.value = "Play";
+	clearTimeout(vidTimer);
+}
+
+</script>
+</head>
+
+<body onload="init()">
+
+<video src="../Template_Assets/videos/NAFTC_PROMO_INTRO_iPad.mp4" id="vid" 
+		style="position:absolute; top: 10; left: 10;"
+>
+</video>
+
+<canvas id="can" height="270" width="480" 
+		style="position:absolute; top: 10; left: 10;" 
+>
+
+</canvas>
+
+<p 		style="position:absolute; top: 50; left: 50;">
+<input type="button" value="Play" onclick="playVideo()" id="play"
+	   style="font:18 pt Helvetica">
+</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>PRT_iPadTrailer_Videos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- Save for Web Slices (PRT_iPadTrailer_Videos) -->
+<table id="Table_01" width="961" height="640" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="7">
+			<img src="../Template_Assets/images/PRT_iPadTrailer_Videos_01.png" width="960" height="480" alt=""></td>
+		<td>
+			<img src="../Template_Assets/images/spacer.gif" width="1" height="480" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="../Template_Assets/images/PRT_iPadTrailer_Videos_02.png" width="561" height="1" alt=""></td>
+		<td rowspan="2">
+			<a href="../environmental.html">
+				<img src="../Template_Assets/images/environmental.png" width="92" height="105" border="0" alt=""></a></td>
+		<td rowspan="2">
+			<a href="../economic.html">
+				<img src="../Template_Assets/images/economic.png" width="79" height="105" border="0" alt=""></a></td>
+		<td rowspan="2">
+			<a href="../security.html">
+				<img src="../Template_Assets/images/security.png" width="97" height="105" border="0" alt=""></a></td>
+		<td rowspan="2">
+			<a href="../renewability.html">
+				<img src="../Template_Assets/images/renewability.png" width="85" height="105" border="0" alt=""></a></td>
+		<td rowspan="4">
+			<img src="../Template_Assets/images/PRT_iPadTrailer_Videos_07.png" width="46" height="160" alt=""></td>
+		<td>
+			<img src="../Template_Assets/images/spacer.gif" width="1" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="3">
+			<img src="../Template_Assets/images/PRT_iPadTrailer_Videos_08.png" width="472" height="159" alt=""></td>
+		<td rowspan="2">
+			<a href="../health.html"
+				onmouseover="window.status='health';  return true;"
+				onmouseout="window.status='';  return true;">
+				<img src="../Template_Assets/images/health.png" width="89" height="105" border="0" alt=""></a></td>
+		<td>
+			<img src="../Template_Assets/images/spacer.gif" width="1" height="104" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="4" rowspan="2">
+			<img src="../Template_Assets/images/PRT_iPadTrailer_Videos_10.png" width="353" height="55" alt=""></td>
+		<td>
+			<img src="../Template_Assets/images/spacer.gif" width="1" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="../Template_Assets/images/PRT_iPadTrailer_Videos_11.png" width="89" height="54" alt=""></td>
+		<td>
+			<img src="../Template_Assets/images/spacer.gif" width="1" height="54" alt=""></td>
+	</tr>
+</table>
+<!-- End Save for Web Slices -->
+</body>
+</html>

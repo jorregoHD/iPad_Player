@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="main_Bio.css">
+<script src="biodiesel.js"></script>
+<title>bucky</title>
+</head>
+
+<body> 
+ <!--<canvas id="canvas" width="1024" height"768">
+    	checking for browser compatibility
+    </canvas>-->
+<section id="skin">
+	<video width="1024" height="768" id="myMovie" >
+    	<source src="../videos/Biodiesel_BG_HEALTHBenefits_Lite_1.mp4" type="video/mp4">
+    </video>
+    
+    <nav>
+    	<!-- startButton commented
+        <div id="startButton" >
+            <img src="images/play.png"  />
+        </div>
+        -->
+        
+        <div id="health" onclick="healthPage()">
+            <img src="images/health.png"  />
+        </div>
+        
+        
+        <div id="environmental" onclick="environmentalPage()">
+            <img src="images/environmental.png"  />
+        </div>
+        
+        
+         <div id="economic" onclick="economicPage()">
+            <img src="images/economic.png"  />
+        </div>
+         
+         <div id="security" onclick="securityPage()">
+            <img src="images/security.png"  />
+        </div>
+        
+         <div id="renewability" onclick="renewabilityPage()">
+            <img src="images/renewability.png"  />
+        </div>
+        
+        <div id="biodiesel">
+        	<img src="images/AltFuels_Icons/Biodiesel_Icon.png"  />
+        </div>
+        
+        <div id="ethanol" onclick="ethanolPage()">
+        	<img src="images/AltFuels_Icons/Ethanol_Icon.png"  />
+        </div>
+        
+            <script>
+			
+			var videoSource = new Array();
+			videoSource[0] ='videos/NAFTC_PROMO_INTRO.mp4';
+			videoSource[1] ='videos/Biodiesel_BG_HEALTHBenefits_Lite_1.mp4';
+			videoSource[2] ='videos/NAFTC_PROMO_INTRO_iPad.mp4';
+			
+			function healthPage(){
+					window.open("http://amazon.com","_self");	
+			}
+			
+			function environmentalPage(){
+					window.open("http://jorrego.com","_self");	
+			}
+			
+			function economicPage(){
+					window.open("http://amazon.com","_self");	
+			}
+			
+			function securityPage(){
+					window.open("http://amazon.com","_self");	
+			}
+			
+			function renewabilityPage(){
+					window.open("http://amazon.com","_self");	
+			}
+			
+			function ethanolPage(){
+					window.open("../Ethanol/ethanol.html","_self");	
+			}
+			</script>
+        
+        <!--<div style="clear:both"></div>
+        
+        
+         play button and slider for video player
+       <div id="buttons">
+        	<button  type="button" id="playButton">PLAY</button>
+        </div>
+       
+        
+        <div id="defaultBar">
+        		<div id="progressBar"></div>  
+        </div>
+        -->
+    </nav>
+    
+   
+    
+</section>
+</body>
+</html>

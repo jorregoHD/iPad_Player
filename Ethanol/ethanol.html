@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="main_etha.css">
+<script src="ethanol.js">
+//function noBack(){window.history.forward();}
+</script>
+<title>bucky</title>
+</head>
+
+<body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onunload=""> 
+ <!--<canvas id="canvas" width="1024" height"768">
+    	checking for browser compatibility
+    </canvas>-->
+<section id="skin">
+	
+         <video width="1024" height="768" id="myMovie" >
+    	<!--<source src="../videos/NAFTC_PROMO_INTRO_iPad.mp4">
+        -->
+    </video>
+    
+    <nav>
+    	<!-- startButton commented
+        <div id="startButton" >
+            <img src="images/play.png"  />
+        </div>
+        -->
+        
+        
+        
+        <div id="health" >
+            <img src="images/health.png"  />
+        </div>
+        
+       
+        
+        <div id="environmental" >
+            <img src="images/environmental.png"  />
+        </div>
+        
+        
+         <div id="economic" onclick="economicPage()">
+            <img src="images/economic.png"  />
+        </div>
+         
+         <div id="security" onclick="securityPage()">
+            <img src="images/security.png"  />
+        </div>
+        
+         <div id="renewability" onclick="renewabilityPage()">
+            <img src="images/renewability.png"  />
+        </div>
+        
+        <div id="biodiesel" onClick="biodieselPage()">
+        	<img src="images/AltFuels_Icons/Biodiesel_Icon.png"  />
+        </div>
+        
+        <div id="ethanol">
+        	<img src="images/AltFuels_Icons/Ethanol_Icon_play.png"  />
+        </div>
+        
+           <script>
+			
+			
+			
+			function economicPage(){
+					window.open("http://amazon.com","_self");	
+			}
+			
+			function securityPage(){
+					window.open("http://amazon.com","_self");	
+			}
+			
+			function renewabilityPage(){
+					window.open("http://amazon.com","_self");	
+			}
+			
+			function biodieselPage(){
+					window.open("../Biodiesel/biodiesel.html","_self");	
+			}
+			</script>
+            
+            
+        <div style="clear:both"></div>
+        
+        
+         <!--play button and slider for video player-->
+       
+       
+         
+        <div id="defaultBar">
+        		<div id="progressBar"></div>  
+        </div>
+        <div id="playButton" >
+            <img src="images/play.png" width="100px" height="100px"  />
+         </div>
+    </nav>
+    
+   
+    
+</section>
+</body>
+</html>

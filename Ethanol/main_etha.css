@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background-color:#000;
+	text-align:center;
+}
+header,section,footer,aside,nav,article,hgroup{
+	display:block;
+}
+#skin{
+	width:1024px;
+	height: 768px;
+	background:black;
+	
+		
+}
+
+nav{
+	/*margin:1px 0px;*/
+	  z-index: 2147483647;
+}
+
+
+#startButton{
+	position:absolute;
+	left:50px;
+	top:655px;
+  width: 89px;
+  height: 105px;
+}
+
+#health{
+	position:absolute;
+	left:500px;
+	top:635px;
+  width: 89px;
+  height: 105px;
+ 
+}
+
+#environmental{
+	position:absolute;
+	left:600px;
+	top:635px;
+    width: 89px;
+    height: 105px;
+	
+}
+
+#economic{
+	position:absolute;
+	left:700px;
+	top:635px;
+    width: 89px;
+    height: 105px;
+	
+}
+
+#security{
+	position:absolute;
+	left:795px;
+	top:635px;
+    width: 89px;
+    height: 105px;
+	
+}
+
+#renewability{
+	position:absolute;
+	left:895px;
+	top:635px;
+    width: 89px;
+    height: 105px;
+	
+}
+
+#biodiesel{
+	position:absolute;
+	opacity: 0.7;
+	left:50px;
+	top:640px;
+    width: 89px;
+    height: 105px;
+	
+}
+
+#ethanol{
+	position:absolute;
+	
+	left:160px;
+	top:640px;
+    width: 89px;
+    height: 105px;
+	
+}
+
+#buttons{
+
+  z-index: 2147483647;		
+}
+
+
+#defaultBar{
+	
+	opacity: 0.2;
+	position:absolute;
+	left:282px;
+	top: 668px;
+	width:180px;
+	height: 20px;
+	padding: 8px;
+	background: #007ba7;
+	border-radius:15px;
+
+		
+}
+#defaultBar:hover{
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	opacity:1;	
+	-webkit-transition: opacity .2s ease-in-out;
+}
+
+
+#progressBar{
+	position:relative;
+	width:0px;
+	height:20px;
+	background: #CCC;
+	border: 2px;
+	border-radius: 18px;
+		
+}
+#playButton{
+	position:absolute;
+	left:282px;
+	top: 640px;
+	width:70px;
+    height:70px;
+	
+}
+#canvas{
+	position:absolute
+	z-index: 2147483647;
+}
+#myMovie{
+  -webkit-transform-style: preserve-3d;
+  z-index: 1;
+  width: 1024px;
+  height:760px;
+}
+  </s
+}

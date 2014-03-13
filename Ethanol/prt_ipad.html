@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+
+
+
+   <meta charset=”utf-8″>
+   <meta name=”apple-mobile-web-app-capable” content=”yes” />
+<title>My Video</title>
+  <link rel=”apple-touch-icon” href=../”images/economic.png” />
+   <style>
+    body {margin:0;}
+   </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <title>TrailerVideo_Player</title>
+  
+ 
+  
+  
+  
+
+  
+  <style type='text/css'>
+      #health {
+  position: absolute; 
+  top: 82%; 
+  right: 500px;
+  color: #FFF; 
+  text-align: center;
+  font-size: 20px;
+  width: 89px;
+  height: 105px;
+  padding: 10px 0;
+  z-index: 2147483647;
+}
+
+      #environmental {
+   position: absolute; 
+  top: 82%; 
+  right: 400px;
+  color: #FFF; 
+  text-align: center;
+  font-size: 20px;
+  width: 89px;
+  height: 105px;
+  padding: 10px 0;
+  z-index: 2147483647;
+}
+
+      #economic {
+    position: absolute; 
+  top: 82%; 
+  right: 300px;
+  color: #FFF; 
+  text-align: center;
+  font-size: 20px;
+  width: 89px;
+  height: 105px;
+  padding: 10px 0;
+  z-index: 2147483647;
+}
+
+      #security {
+  position: absolute; 
+  top: 82%; 
+  right: 200px;
+  color: #FFF; 
+  text-align: center;
+  font-size: 20px;
+  width: 89px;
+  height: 105px;
+  padding: 10px 0;
+  z-index: 2147483647;
+}
+
+      #renewable {
+  position: absolute; 
+  top: 82%; 
+  right: 100px;
+  color: #FFF; 
+  text-align: center;
+  font-size: 20px;
+  width: 89px;
+  height: 105px;
+  padding: 10px 0;
+  z-index: 2147483647;
+}
+
+#v {
+  -webkit-transform-style: preserve-3d;
+  z-index: 1;
+  width: 1024px;
+  height:768px;
+}
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+window.onload=function(){
+  var overlay= document.getElementById('health');
+  var video= document.getElementById('v');
+  video.addEventListener('progress', function() {
+    var show= video.currentTime>=5 && video.currentTime<10;
+    overlay.style.visibility= show? 'visible' : 'visible';
+  }, false);
+}//]]>  
+
+</script>
+
+
+</head>
+<body bgcolor="#000000">
+    
+    <video id="v" controls>
+    <source id='mp4'
+    src="../Template_Assets/videos/NAFTC_PROMO_INTRO_iPad.mp4"
+    type='video/mp4'>
+    <source id='webm'
+    src="http://media.w3.org/2010/05/sintel/trailer.webm"
+    type='video/webm'>
+    <source id='ogv'
+    src="http://media.w3.org/2010/05/sintel/trailer.ogv"
+    type='video/ogg'>
+    <p>Your user agent does not support the HTML5 Video element.</p>
+
+
+</video>
+
+
+
+<video width="1024" height="768" controls>
+<div id="health"><a href="../Template_Assets/videos/Biodiesel_BG_HEALTHBenefits_Lite_1.mp4" " 
+				onmouseover="window.status='health';  return true;"
+				onmouseout="window.status='';  return true;">
+<img src="../Template_Assets/images/health.png" width="89" height="105" border="0" alt=""></a></div>
+</video>
+
+<div id="environmental"><a href="../Template_Assets/videos/Biodiesel_BG_HEALTHBenefits_Lite_1.mp4" "target="_self"" 
+				onmouseover="window.status='health';  return true;"
+				onmouseout="window.status='';  return true;">
+<img src="../Template_Assets/images/environmental.png" width="89" height="105" border="0" alt=""></a></div>
+
+<div id="economic"><a href="../Template_Assets/videos/Biodiesel_BG_HEALTHBenefits_Lite_1.mp4" "target="_self"" 
+				onmouseover="window.status='health';  return true;"
+				onmouseout="window.status='';  return true;">
+<img src="../Template_Assets/images/economic.png" width="89" height="105" border="0" alt=""></a></div>
+
+<div id="security"><a href="../Template_Assets/videos/Biodiesel_BG_HEALTHBenefits_Lite_1.mp4" "target="_self"" 
+				onmouseover="window.status='health';  return true;"
+				onmouseout="window.status='';  return true;">
+<img src="../Template_Assets/images/security.png" width="89" height="105" border="0" alt=""></a></div>
+
+<div id="renewable"><a href="../Template_Assets/videos/Biodiesel_BG_HEALTHBenefits_Lite_1.mp4" "target="_self"" 
+				onmouseover="window.status='health';  return true;"
+				onmouseout="window.status='';  return true;">
+<img src="../Template_Assets/images/renewability.png" width="89" height="105" border="0" alt=""></a></div>
+  
+</body>
+
+
+</html>
